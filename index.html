@@ -3,24 +3,24 @@
   <head>
     <meta charset="utf-8">
     <title>Интернет-магазин электроники Device</title> <!--Зоголовок страницы-->
+    <link rel="stylesheet" href="styles/styles.css">
   </head>
   <body>
     <header class="page-header">
       <nav class="header-nav">
         <a class=navigation-logo href="index.html">
-          <img class=page-header-logo src="img.png" alt="Логотип Device">
+          <img class=page-header-logo src="image/logo.svg" width="145px" height="36px" alt="Логотип Device">
         </a>
-
         <div class="header-personalmenu">
-          <form class="header-searchform" action="https://echo.htmlacademy.ru/" method="get">
-            <input class="header-search-input" name="search" type=text placeholder="Текст поиска">
-            <button class="header-search-button" type="submit">
-              <span class="visually-hidden">Поиск</span>
+          <form class="header-searchform" action="https://echo.htmlacademy.ru/" method="post">
+            <input class="header-search-input" name="header-search" type=text placeholder="Текст поиска">
+            <button class="header-search-button" type="button" name="Найти">
+              Найти
             </button>
           </form>
           <ul class="header-personalmenu-list">
             <li class="header-personalmenu-item">
-              <a class="header-personalmenu-link-personalmenu-login" href="#"><img class="login-icon" src="img.png" alt="Логин">Войти</a>
+              <a class="header-personalmenu-link personalmenu-login" href="#"><img class="login-icon" src="img.png" alt="Логин">Войти</a>
             </li>
             <li class="header-personalmenu-item">
               <a class="header-personalmenu-link personalmenu-logout" href="#"><img class="login-icon" src="img.png" alt="Логин">Выйти</a>
@@ -36,7 +36,7 @@
 
         <div class="header-catalog-toggler">
           <a class="header-catalog-link" href="catalog.html">Каталог товаров</a>
-          <a class="header-catalog-toggler" href="#" >
+          <a class="header-catalog-toggler-button" href="#" >
             <span class="visually-hidden">развернуть поиск</span>
           </a>
         </div>
@@ -60,6 +60,7 @@
     <main class="page-main">
       <h1 class="visually-hidden">Интернет-магазин Device</h1>
       <section class="main-slider"><!--Секция слайдер карточек топ-товаров-->
+        <div class="slider-number">1</div>
         <h2 class="visually-hidden">Топ товары</h2>
 
         <ol class="slider-card-list"><!--галерея фото карточки товара для слайдера-->
@@ -67,25 +68,24 @@
             <span class="visually-hidden">Квадрокоптер с лазером</span>
             <img class="slider-class" src="img.png" alt="Фото Квадрокоптера 1">
             <button class="slider-button slider-prev" type="button">
-              <span class="visually-hidden">Предыдущее фото</span>
+              Предыдущее фото
             </button>
             <button class="slider-button slider-next" type="button">
-              <span class="visually-hidden">Следующее фото</span>
+              Следующее фото
             </button>
-            <h3 class="slider-cart-summry">Порхает как бабочка,
+            <h3 class="slider-cart-summary">Порхает как бабочка,
               жалит как пчела!</h3><!--краткое резюме достоинств товара-->
             <p class="slider-cart-feauters">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.
             </p><!--особенности товара-->
+            <a class="slider-cart-button button" href="#">ПОДРОБНЕЕ</a>
             <table class=slider-cart-parameters>
               <tr class="slider-cart-parameters_value">
                 <td>800м</td><td>50м</td>
               </tr>
               <tr>
-                <td class="slider-cart-parameters_parameter">Дальность полета</td><td>Радиус поражения</td>
+                <td class="slider-cart-parameters_parameter">Дальность полета</td><td class="slider-cart-parameters_parameter">Радиус поражения</td>
               </tr>
             </table>
-
-            <a class="slider-cart-button" href="#">ПОДРОБНЕЕ</a>
           </li>
           <li class="slider-card-item"><!--Топ-товар 2-->
 
@@ -146,20 +146,20 @@
 
     <section class="main-property"><!--Особенности интернет магазина-->
       <h2 class="main-property-tittle">Особенности интернет-магазина</h2>
-      <ul class="property-pagination"><!--Вертикальная пагинация Особенности магазина-->
-        <li class="property-pagination-item">
-          <button class="property-pagination-button pagination-button-current">
-            <span class="visually-hidden">Доставка</span>
+      <ul class="property-list"><!--Слайды Особенности магазина-->
+        <li class="property-item">
+          <button class="property-button property-active" type="button">
+            Доставка
           </button>
         </li>
         <li class="property-pagination-item">
-          <button class="property-pagination-button">
-            <span class="visually-hidden">Гарантия</span>
+          <button class="property-button  button" name="Гарантия">
+            Гарантия
           </button>
         </li>
         <li class="property-pagination-item">
-          <button class="property-pagination-button">
-            <span class="visually-hidden">Кредит</span>
+          <button class="property-button  button" name="Кредит">
+            Кредит
           </button>
         </li>
       </ul>
@@ -214,7 +214,7 @@
           </li>
         </ul>
         <div class="main-about-full">
-          <a class="main-about-full_link" href="#">ПОДРОБНЕЕ О НАС</a>
+          <a class="main-about-full_link  button" href="#">ПОДРОБНЕЕ О НАС</a>
         </div>
       </section>
 
@@ -233,7 +233,7 @@
           <li class="main-about-contacts-shedube-item">сб—вс: с 10:00 до 19:00</li>
         </ul>
         <div class="main-about-postmail">
-          <a class="main-about-postmail_link" href="#">НАПИШИТЕ НАМ</a>
+          <a class="main-about-postmail_link  button" href="#">НАПИШИТЕ НАМ</a>
         </div>
       </section>
     </section>
